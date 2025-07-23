@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Свадьба Юлии и Евгения</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom, #faf0f5, #e6f2ff);
+      font-family: 'Marck Script', cursive;
+      color: #4b3b47;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.5em;
+      margin: 0.5em;
+    }
+    img {
+      width: 300px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .form-container {
+      margin-top: 40px;
+      text-align: left;
+      display: inline-block;
+    }
+    label {
+      font-size: 1.2em;
+    }
+    input[type="text"], select {
+      padding: 8px;
+      margin: 10px 0;
+      width: 100%;
+      font-size: 1em;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    input[type="submit"] {
+      background-color: #d5b3c4;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #caa1b2;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>С любовью навсегда 💍</h1>
+  <p>Мы, Юлия и Евгений, счастливы пригласить вас на наш самый важный день.</p>
+  <p>📅 23 августа 2025<br>📍 Зал торжеств "Версаль", Минск</p>
+
+  <!-- 📸 Фото -->
+  <img src="ваш-файл.jpg" alt="Фото пары">
+
+  <div class="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfMd7YxGwUOD_tOhUzXUFUlA6cax8sOuCDvTIMGKoZD0xYZ9g/viewform?embedded=true" width="640" height="788" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+      <label for="name">Ваше имя:</label><br>
+      <input type="text" id="name" name="name" required><br>
+
+      <label for="attending">Вы будете присутствовать?</label><br>
+      <select id="attending" name="attending" required>
+        <option value="">Выберите вариант</option>
+        <option value="Да">Да, с радостью!</option>
+        <option value="Нет">К сожалению, не смогу</option>
+        <option value="Пока не знаю">Пока не уверен(а)</option>
+      </select><br>
+
+      <label for="drink">Какой алкоголь предпочитаете?</label><br>
+      <select id="drink" name="drink">
+        <option value="">Выберите вариант</option>
+        <option value="Вино">Вино</option>
+        <option value="Игристое">Игристое</option>
+        <option value="Коктейли">Коктейли 🍸</option>
+        <option value="Пиво">Пиво 🍺</option>
+        <option value="Безалкогольное">Безалкогольное 🌸</option>
+      </select><br>
+
+      <input type="submit" value="Отправить приглашение">
+    </form>
+  </div>
+
+  <p style="margin-top: 40px;">🌷 Пусть этот день станет началом нашей вечности. Будем счастливы разделить его с вами.</p>
+
+</body>
+</html>
