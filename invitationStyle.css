@@ -169,46 +169,46 @@ iframe.form {
 
 .collage {
     position: relative;
-    width: 300px;
+    width: 18.75rem;
     /* можно адаптировать */
-    height: 300px;
+    height: 18.75rem;
     margin: 0 auto;
 }
 
 .collage-img {
     position: absolute;
-    width: 150px;
-    height: 190px;
+    width: 9.375rem;
+    height: 11.875rem;
     object-fit: cover;
-    border-radius: 3px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.1875rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease;
 }
 
 /* Смещения и наложения */
 .img1 {
-    top: 50px;
-    left: -12px;
+    top: 3.125rem;
+    left: -0.125rem;
     z-index: 2;
 }
 
 .img2 {
-    top: 0px;
-    right: 15px;
+    top: 0rem;
+    right: 0.93rem;
     z-index: 1;
 }
 
 .img3 {
-    top: 85px;
-    left: 280px;
+    top: 5.41rem;
+    left: 17.5rem;
     z-index: 3;
 }
 
 .cover-img {
     width: 100%;
-    max-height: 400px;
+    max-height: 25rem;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 .cover-title {
@@ -225,7 +225,7 @@ iframe.form {
     background: linear-gradient(135deg, rgba(198, 187, 176, 0.8), #9c9680);
     border-color: #aca388;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.31rem 0.93rem rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
@@ -246,8 +246,8 @@ iframe.form {
 }
 
 .round-button {
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     font-size: 2rem;
     background: linear-gradient(70deg, rgba(210, 200, 190, 0.8), #d4c486);
     border-radius: 125%;
@@ -262,6 +262,6 @@ iframe.form {
 
 .label {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-size: 1.2rem;
 }
