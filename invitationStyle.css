@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('./files/photo_2025-07-06_10-51-51.jpg');
+    background: url('./files/Рисунок5.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -172,7 +172,7 @@ iframe.form {
     width: 18.75rem;
     /* можно адаптировать */
     height: 18.75rem;
-    margin: 0 auto;
+    margin: 6.25rem;
 }
 
 .collage-img {
