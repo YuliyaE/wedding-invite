@@ -1,139 +1,267 @@
-<!DOCTYPE html>
-<html lang="ru">
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: url('./files/photo_2025-07-06_10-51-51.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-<head>
-    <meta charset="UTF-8">
-    <title>Свадебное приглашение</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Marck+Script&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="invitationStyle.css">
-</head>
+/* Вступление */
+.container {
+    max-width: 44rem;
+    margin: auto;
+    padding: 1.25rem;
+    text-align: center;
+}
 
-<body>
-    <audio id="myAudio" src="./files/718497d1b966f60.mp3" preload="auto" loop></audio>
-    <div class="glitter-container"></div>
+/* Заголовок */
+h1 {
+    /* font-family: 'Marck Script', cursive; */
+    font-family: 'Angelica Regular', cursive;
+    font-size: 2.75em;
+    color: #b37f9b;
+    margin-bottom: 0.5em;
+}
 
-    <div id="intro">
-        <img src="cover.jpg" alt="Обложка" class="cover-img">
-        <h1 class="cover-title">Приглашение на свадьбу</h1>
-    </div>
+p {
+    font-size: 1.4em;
+    margin: 0.5em 0;
+}
 
-    <div class="unlock-container" id="introWithButton">
-        <button id="unlock-btn" class="round-button">
-            🔒
-        </button>
-        <div class="label">Разблокируйте приглашение</div>
-    </div>
+.photos img {
+    width: 90%;
+    max-width: 21.8rem;
+    margin: 0.625rem auto;
+    border-radius: 0.93rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+}
 
-    <!-- Приглашение (скрыто) -->
-    <div id="invitation" style="display: none;">
-        <div class="container">
-            <h1>С любовью навсегда 💍</h1>
-            <p>Мы рады пригласить Вас на нашу свадьбу!</p>
+iframe.music {
+    width: 100%;
+    height: 5rem;
+    border: none;
+    margin: 1.25rem 0;
+}
 
-            <!-- 🎀 Имена -->
-            <div class="names">
-                <div class="name">Julia</div>
-                <div class="name">Eugene</div>
-            </div>
+.countdown {
+    font-size: 1.8em;
+    margin: 1, 25rem 0;
+    color: #ffffff;
+}
 
-            <div class="details">
-                <div class="date">23 августа 2025</div>
-            </div>
+iframe.form {
+    width: 100%;
+    height: 37.5rem;
+    border: none;
+    margin-top: 1.87rem;
+}
 
-            <div class="collage">
-                <img src="files/Побольше.jpg" class="collage-img img1">
-                <img src="files/photo_2024-11-17_21-55-50.jpg" class="collage-img img2">
-                <img src="files/photo_2025-07-06_10-51-51.jpg" class="collage-img img3">
-            </div>
+.names {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.87rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
 
-            <div class="photos">
-                <div class="venue">Наш праздник пройдёт в усадьбе Belladzhio VIP Minsk</div>
-                <div class="venue">Она находится по адресу: Минск, а.г Ждановичи, ул Светлая, 18</div>
-                <img src="files/Bellagio.jpg" alt="Фото 2">
-            </div>
+.name {
+    font-family: 'Crimson Pro', cursive;
+    font-size: 3em;
+}
 
+.photo {
+    max-width: 17.5rem;
+    border-radius: 0.94rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+}
 
-            <!-- ⏳ Отсчёт до свадьбы -->
-            <div class="countdown" id="countdown">До нашей свадьбы осталось: ...</div>
+.date {
+    font-family: 'Crimson Pro', cursive;
+    font-size: 2.5em;
+}
 
-            <div class="schedule-wrapper">
-                <div class="schedule-section">
-                    <h2>Тайминг</h2>
-                    <p>💐 <strong>15:00</strong> — Сбор гостей, фуршет</p>
-                    <p>💍 <strong>16:00</strong> — Торжественная церемония</p>
-                    <p>📷 <strong>16:30</strong> — Фотосессия</p>
-                    <p>🍽 <strong>17:00</strong> — Банкет</p>
-                    <p>🎂 <strong>22:00</strong> — Розыгрыш первого кусочка торта</p>
-                    <p>🌙 <strong>23:00</strong> — Завершение вечера</p>
-                </div>
-            </div>
+.venue {
+    font-size: 1.4em;
+    color: #000000;
+    margin-top: 0.31rem;
+}
 
-            <p>Подтвердите, пожалуйста, своё присутствие до 01.09.2025</p>
-            <p>Ждём Вас!</p>
-            <p>Ваши Юлия и Евгений!</p>
+/* Расписание */
+.schedule-wrapper {
+    background: radial-gradient(circle at top, #e1cfa4, rgba(210, 200, 190, 0.8));
+    padding: 1.125rem;
+    border-radius: 1.56rem;
+    margin: 0.93rem auto;
+    max-width: 31.25rem;
+    position: relative;
+    animation: pulse 5s infinite ease-in-out;
+    text-align: center;
+}
 
-            <h6>© By Dragonfly</p>
-        </div>
+.schedule-wrapper h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    margin-bottom: 0.93rem;
+    color: #000000;
+}
 
-        <!-- 📩 Google Форма -->
-        <!-- <iframe class="form"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfMd7YxGwUOD_tOhUzXUFUlA6cax8sOuCDvTIMGKoZD0xYZ9g/viewform?embedded=true">Загрузка…</iframe> -->
-    </div>
+.schedule-wrapper p {
+    font-size: 1.2em;
+    margin: 0.625rem 0;
+}
 
-    <script>
-        document.getElementById('unlock-btn').addEventListener('click', () => {
-            // Музыка
-            const audio = document.getElementById('myAudio');
-            audio.volume = 0;
-            audio.play();
+@keyframes pulse {
 
-            let v = 0;
-            const fade = setInterval(() => {
-                v += 0.02;
-                audio.volume = v;
-                if (v >= 1) clearInterval(fade);
-            }, 100);
+    0%,
+    100% {
+        box-shadow: 0 0 1.25rem rgba(214, 164, 222, 0.2);
+    }
 
-            // Скрываем обложку и показываем приглашение
-            document.getElementById('intro').style.display = 'none';
-            document.getElementById('invitation').style.display = 'block';
-            document.getElementById('introWithButton').style.display = 'none';
-        });
+    50% {
+        box-shadow: 0 0 2.5rem rgba(214, 164, 222, 0.4);
+    }
+}
 
+@media (max-width: 37.5rem) {
+    h1 {
+        font-size: 2em;
+    }
 
-        const targetDate = new Date('2025-08-23T14:00:00');
-        const countdown = document.getElementById("countdown");
+    .countdown {
+        font-size: 1.2em;
+    }
 
-        function updateCountdown() {
-            const now = new Date();
-            const diff = targetDate - now;
-            if (diff < 0) {
-                countdown.textContent = "Свадьба уже началась! 💒";
-                return;
-            }
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-            const minutes = Math.floor(diff / (1000 * 60)) % 60;
-            countdown.textContent = `До нашей свадьбы осталось: ${days} дн. ${hours} ч. ${minutes} мин.`;
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
+    .schedule-wrapper {
+        padding: 1.25rem;
+    }
+}
 
-        function createGlitter() {
-            const glitter = document.createElement('div');
-            glitter.className = 'glitter';
-            glitter.style.left = Math.random() * window.innerWidth + 'px';
-            glitter.style.top = '-10px';
-            glitter.style.animationDuration = (Math.random() * 2 + 2) + 's';
-            document.querySelector('.glitter-container').appendChild(glitter);
+.glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
 
-            setTimeout(() => glitter.remove(), 5000);
-        }
+.glitter {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: radial-gradient(circle, #ffffff 30%, #ff99ff 50%, #ffcc00 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem #fff8cc, 0 0 0.75rem #ff99ff;
+    animation: fall 3s linear infinite;
+    opacity: 0.9;
+    mix-blend-mode: screen;
+}
 
-        setInterval(createGlitter, 300);
-    </script>
-</body>
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
 
-</html>
+.collage {
+    position: relative;
+    width: 300px;
+    /* можно адаптировать */
+    height: 300px;
+    margin: 0 auto;
+}
+
+.collage-img {
+    position: absolute;
+    width: 150px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+/* Смещения и наложения */
+.img1 {
+    top: 50px;
+    left: -12px;
+    z-index: 2;
+}
+
+.img2 {
+    top: 0px;
+    right: 15px;
+    z-index: 1;
+}
+
+.img3 {
+    top: 85px;
+    left: 280px;
+    z-index: 3;
+}
+
+.cover-img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.cover-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #b48ca3;
+    margin-top: 1rem;
+}
+
+#unlock-btn {
+    display: block;
+    margin: 2rem auto;
+    font-size: 1.5rem;
+    background: linear-gradient(135deg, rgba(198, 187, 176, 0.8), #9c9680);
+    border-color: #aca388;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#invitation {
+    padding: 2rem;
+    animation: fadeIn 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.unlock-container {
+    text-align: center;
+}
+
+.round-button {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    background: linear-gradient(70deg, rgba(210, 200, 190, 0.8), #d4c486);
+    border-radius: 125%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.round-button:hover {
+    transform: scale(1.1);
+}
+
+.label {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
