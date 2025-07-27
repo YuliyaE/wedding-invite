@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Свадебное приглашение</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Marck+Script&display=swap"
         rel="stylesheet">
     <style>
@@ -17,9 +17,9 @@
         }
 
         .container {
-            max-width: 700px;
+            max-width: 44rem;
             margin: auto;
-            padding: 20px;
+            padding: 1.25rem;
             text-align: center;
         }
 
@@ -31,44 +31,44 @@
         }
 
         p {
-            font-size: 1.2em;
+            font-size: 1.4em;
             margin: 0.5em 0;
         }
 
         .photos img {
             width: 90%;
-            max-width: 350px;
-            margin: 10px auto;
-            border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 21.8rem;
+            margin: 0.625rem auto;
+            border-radius: 0.93rem;
+            box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
         }
 
         iframe.music {
             width: 100%;
-            height: 80px;
+            height: 5rem;
             border: none;
-            margin: 20px 0;
+            margin: 1.25rem 0;
         }
 
         .countdown {
             font-size: 1.4em;
-            margin: 20px 0;
+            margin: 1,25rem 0;
             color: #ffffff;
         }
 
         iframe.form {
             width: 100%;
-            height: 600px;
+            height: 37.5rem;
             border: none;
-            margin-top: 30px;
+            margin-top: 1.87rem;
         }
 
         .names {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            margin-bottom: 20px;
+            gap: 1.87rem;
+            margin-bottom: 1.25rem;
             flex-wrap: wrap;
         }
 
@@ -78,9 +78,9 @@
         }
 
         .photo {
-            max-width: 280px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 17.5rem;
+            border-radius: 0.94rem;
+            box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
         }
 
         .date {
@@ -89,18 +89,18 @@
         }
 
         .venue {
-            font-size: 1.8em;
-            color: #444;
-            margin-top: 5px;
+            font-size: 1.4em;
+            color: #000000;
+            margin-top: 0.31rem;
         }
 
         /* Расписание */
         .schedule-wrapper {
             background: radial-gradient(circle at top, #e1cfa4, rgba(210, 200, 190, 0.8));
-            padding: 18px;
-            border-radius: 25px;
-            margin: 15px auto;
-            max-width: 500px;
+            padding: 1.125rem;
+            border-radius: 1.56rem;
+            margin: 0.93rem auto;
+            max-width: 31.25rem;
             position: relative;
             animation: pulse 5s infinite ease-in-out;
             text-align: center;
@@ -109,28 +109,28 @@
         .schedule-wrapper h2 {
             font-family: 'Great Vibes', cursive;
             font-size: 2em;
-            margin-bottom: 15px;
+            margin-bottom: 0.93rem;
             color: #000000;
         }
 
         .schedule-wrapper p {
             font-size: 1.2em;
-            margin: 10px 0;
+            margin: 0.625rem 0;
         }
 
         @keyframes pulse {
 
             0%,
             100% {
-                box-shadow: 0 0 20px rgba(214, 164, 222, 0.2);
+                box-shadow: 0 0 1.25rem rgba(214, 164, 222, 0.2);
             }
 
             50% {
-                box-shadow: 0 0 40px rgba(214, 164, 222, 0.4);
+                box-shadow: 0 0 2.5rem rgba(214, 164, 222, 0.4);
             }
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 37,5rem) {
             h1 {
                 font-size: 2em;
             }
@@ -140,7 +140,37 @@
             }
 
             .schedule-wrapper {
-                padding: 20px;
+                padding: 1.25rem;
+            }
+        }
+
+        .glitter-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            overflow: hidden;
+        }
+
+        .glitter {
+            position: absolute;
+            width: 0.5rem;
+            height: 0.5rem;
+            background: radial-gradient(circle, #ffffff 30%, #ff99ff 50%, #ffcc00 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 0.5rem #fff8cc, 0 0 0.75rem #ff99ff;
+            animation: fall 3s linear infinite;
+            opacity: 0.9;
+            mix-blend-mode: screen;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
             }
         }
 
@@ -156,6 +186,9 @@
 
 <body>
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <audio id="myAudio" src="./files/Arash Feat. Helena - One Day.mp3" hidden controls></audio>
+    <div class="glitter-container"></div>
+
     <div class="container">
         <h1>С любовью навсегда 💍</h1>
         <p>Мы, Юлия и Евгений, приглашаем вас на наш волшебный день — свадьбу!</p>
@@ -169,37 +202,27 @@
         <div class="details">
             <img class="photo" src="files/photo_2024-11-17_21-55-50.jpg" alt="Фото пары">
             <div class="date">23 августа 2025</div>
-            <div class="venue">Зал торжеств “Версаль”, Минск</div>
         </div>
 
 
         <div class="photos">
-            <img src="files/photo_2024-11-17_21-55-50.jpg" alt="Фото 2">
+            <div class="venue">Наш праздник пройдёт в усадьбе Belladzhio VIP Minsk</div>
+            <div class="venue">Она находится по адресу: Минск, а.г Ждановичи, ул Светлая, 18</div>
+            <img src="files/Bellagio.jpg" alt="Фото 2">
         </div>
 
 
-        <!-- 🎵 Музыкальный фон -->
-        <!--  <iframe class="music" src="https://open.spotify.com/track/7La30v1IRtp1dttd9c6nRQ?si=f360583704304899" allow="encrypted-media"></iframe>
-  -->
-        <audio controls>
-            <source src="./files/Arash Feat. Helena - One Day.mp3" type="audio/mpeg">
-        </audio>
-
-        <audio autoplay>
-            <source src="./files/Arash Feat. Helena - One Day.mp3" type="audio/mpeg">
-            <source src="./files/Arash Feat. Helena - One Day.mp3" type="audio/ogg">
-            Ваш браузер не поддерживает аудио.
-        </audio>
         <!-- ⏳ Отсчёт до свадьбы -->
         <div class="countdown" id="countdown">До нашей свадьбы осталось: ...</div>
 
         <div class="schedule-wrapper">
             <div class="schedule-section">
-                <h2>Расписание</h2>
-                <p>💐 <strong>15:00</strong> — Встреча гостей</p>
-                <p>💍 <strong>16:00</strong> — Церемония</p>
-                <p>🍽 <strong>16:30</strong> — Банкет</p>
-                <p>🎂 <strong>22:00</strong> — Вынос торта</p>
+                <h2>Программа дня</h2>
+                <p>💐 <strong>15:00</strong> — Сбор гостей, фуршет</p>
+                <p>💍 <strong>16:00</strong> — Свадебная церемония</p>
+                <p>📷 <strong>16:30</strong> — Фотосессия</p>
+                <p>🍽 <strong>17:00</strong> — Банкет</p>
+                <p>🎂 <strong>22:00</strong> — Торт</p>
                 <p>🌙 <strong>23:00</strong> — Завершение вечера</p>
             </div>
         </div>
@@ -209,29 +232,46 @@
         <div class="petal petal3">🌸</div> -->
 
         <!-- 📩 Google Форма -->
-        <iframe class="form"
+        <!-- <iframe class="form"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfMd7YxGwUOD_tOhUzXUFUlA6cax8sOuCDvTIMGKoZD0xYZ9g/viewform?embedded=true">Загрузка…</iframe>
-    </div>
+    </div> -->
 
-    <script>
-        const targetDate = new Date('2025-08-23T14:00:00');
-        const countdown = document.getElementById("countdown");
+        <script>
+            const musicElement = document.querySelector('#myAudio');
+            musicElement.play();
+            new Promise(resolve => setTimeout(1000, musicElement.play()));
 
-        function updateCountdown() {
-            const now = new Date();
-            const diff = targetDate - now;
-            if (diff < 0) {
-                countdown.textContent = "Свадьба уже началась! 💒";
-                return;
+            const targetDate = new Date('2025-08-23T14:00:00');
+            const countdown = document.getElementById("countdown");
+
+            function updateCountdown() {
+                const now = new Date();
+                const diff = targetDate - now;
+                if (diff < 0) {
+                    countdown.textContent = "Свадьба уже началась! 💒";
+                    return;
+                }
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+                const minutes = Math.floor(diff / (1000 * 60)) % 60;
+                countdown.textContent = `До нашей свадьбы осталось: ${days} дн. ${hours} ч. ${minutes} мин.`;
             }
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
-            const minutes = Math.floor(diff / (1000 * 60)) % 60;
-            countdown.textContent = `До нашей свадьбы осталось: ${days} дн. ${hours} ч. ${minutes} мин.`;
-        }
-        updateCountdown();
-        setInterval(updateCountdown, 60000);
-    </script>
+            updateCountdown();
+            setInterval(updateCountdown, 60000);
+
+            function createGlitter() {
+                const glitter = document.createElement('div');
+                glitter.className = 'glitter';
+                glitter.style.left = Math.random() * window.innerWidth + 'px';
+                glitter.style.top = '-10px';
+                glitter.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                document.querySelector('.glitter-container').appendChild(glitter);
+
+                setTimeout(() => glitter.remove(), 4000);
+            }
+
+            setInterval(createGlitter, 300);
+        </script>
 </body>
 
 </html>
