@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Marck+Script&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="invitationStyle.css">
+    <link rel="stylesheet" href="invitationStyle.css">
 </head>
 
 <body>
@@ -50,10 +50,14 @@
 
             <div class="photos">
                 <div class="venue">Наш праздник пройдёт в усадьбе Belladzhio VIP Minsk</div>
-                <div class="venue">Она находится по адресу: Минск, а.г Ждановичи, ул Светлая, 18</div>
+                <div class="venue">Она находится по адресу: г. Минск, а.г. Ждановичи, ул. Светлая 18</div>
                 <img src="files/Bellagio.jpg" alt="Фото 2">
             </div>
 
+
+            <button id="toggleMusic">
+                <img id="musicIcon" src="./files/SoundON.png" alt="Музыка включена" />
+            </button>
 
             <!-- ⏳ Отсчёт до свадьбы -->
             <div class="countdown" id="countdown">До нашей свадьбы осталось: ...</div>
@@ -65,7 +69,7 @@
                     <p>💍 <strong>16:00</strong> — Торжественная церемония</p>
                     <p>📷 <strong>16:30</strong> — Фотосессия</p>
                     <p>🍽 <strong>17:00</strong> — Банкет</p>
-                    <p>🎂 <strong>22:00</strong> — Розыгрыш первого кусочка торта</p>
+                    <p>🎂 <strong>22:00</strong> — Свадебный торт</p>
                     <p>🌙 <strong>23:00</strong> — Завершение вечера</p>
                 </div>
             </div>
@@ -74,21 +78,29 @@
             <p>Ждём Вас!</p>
             <p>Ваши Юлия и Евгений!</p>
         </div>
-   </div>
+    </div>
 
     <script>
+        const audio = document.getElementById('myAudio');
         document.getElementById('unlock-btn').addEventListener('click', () => {
             // Музыка
-            const audio = document.getElementById('myAudio');
-            audio.volume = 0;
+            audio.volume = 0.0;
+
+            // Запускаем музыку
             audio.play();
 
-            let v = 0;
-            const fade = setInterval(() => {
-                v += 0.02;
-                audio.volume = v;
-                if (v >= 1) clearInterval(fade);
-            }, 100);
+            // Постепенное увеличение до 0.7 (можно заменить на нужный уровень)
+            let targetVolume = 0.7;
+            let step = 0.01;
+            let interval = 100; // миллисекунды между шагами
+
+            let fadeIn = setInterval(() => {
+                if (audio.volume < targetVolume) {
+                    audio.volume = Math.min(audio.volume + step, targetVolume);
+                } else {
+                    clearInterval(fadeIn);
+                }
+            }, interval);
 
             // Скрываем обложку и показываем приглашение
             document.getElementById('intro').style.display = 'none';
@@ -114,6 +126,25 @@
         }
         updateCountdown();
         setInterval(updateCountdown, 60000);
+
+        var isSwitchedOn = true;
+        // const music = document.getElementById("weddingMusic");
+        const buttonMusic = document.getElementById("toggleMusic");
+        const icon = document.getElementById("musicIcon");
+
+        buttonMusic.onclick = function () {
+            if (!isSwitchedOn) {
+                audio.play();
+                icon.src = "./files/SoundON.png";
+                icon.alt = "Музыка включена";
+                isSwitchedOn = true;
+            } else {
+                audio.pause();
+                icon.src = "./files/SoundOFF.png";
+                icon.alt = "Музыка выключена";
+                isSwitchedOn = false;
+            }
+        }
 
         function createGlitter() {
             const glitter = document.createElement('div');
