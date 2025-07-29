@@ -27,6 +27,9 @@
 
     <!-- Приглашение (скрыто) -->
     <div id="invitation" style="display: none;">
+        <button id="toggleMusic">
+            <img id="musicIcon" src="./files/MusicON.png" alt="Музыка включена" />
+        </button>
         <div class="container">
             <h1>С любовью навсегда 💍</h1>
             <p>Мы рады пригласить Вас на нашу свадьбу!</p>
@@ -45,7 +48,21 @@
 
             <div class="details">
                 <div class="date">23 августа 2025</div>
-                <img src="files/Календарь.PNG" class="calendar-img">
+                <!-- <img src="files/Календарь.PNG" class="calendar-img"> -->
+
+                <div class="calendar">
+                    <div class="month">September 2025</div>
+                    <div class="days">
+                      <span>Пн</span> <span>Вт</span> <span>Ср</span> <span>Чт</span> <span>Пт</span> <span>Сб</span> <span>Вс</span>
+                    </div>
+                    <div class="dates">
+                      <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                      <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                      <span>15</span><span>16</span><span>17</span><span>18</span><span class="heart">19</span><span>20</span><span>21</span>
+                      <span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span>
+                      <span>29</span><span>30</span>
+                    </div>
+                  </div>
             </div>
 
             <div class="photos">
@@ -54,27 +71,26 @@
                 <img src="files/Bellagio.jpg" alt="Фото 2">
             </div>
 
-
-            <button id="toggleMusic">
-                <img id="musicIcon" src="./files/SoundON.png" alt="Музыка включена" />
-            </button>
-
             <!-- ⏳ Отсчёт до свадьбы -->
             <div class="countdown" id="countdown">До нашей свадьбы осталось: ...</div>
 
             <div class="schedule-wrapper">
                 <div class="schedule-section">
                     <h2>Тайминг</h2>
+                    <img src="files/Фуршет.jpg" class="calendar-img">
                     <p>💐 <strong>15:00</strong> — Сбор гостей, фуршет</p>
+                    <img src="files/Церемония.jpg" class="calendar-img">
                     <p>💍 <strong>16:00</strong> — Торжественная церемония</p>
-                    <p>📷 <strong>16:30</strong> — Фотосессия</p>
+                    <img src="files/Банкет.jpg" class="calendar-img">
                     <p>🍽 <strong>17:00</strong> — Банкет</p>
+                    <img src="files/Торт.png" class="calendar-img">
                     <p>🎂 <strong>22:00</strong> — Свадебный торт</p>
+                    <img src="files/Завершение" class="calendar-img">
                     <p>🌙 <strong>23:00</strong> — Завершение вечера</p>
                 </div>
             </div>
 
-            <p>Подтвердите, пожалуйста, своё присутствие до 01.09.2025</p>
+            <p>Подтвердите, пожалуйста, своё присутствие до <b>01.09.2025</b></p>
             <p>Ждём Вас!</p>
             <p>Ваши Юлия и Евгений!</p>
         </div>
@@ -135,12 +151,12 @@
         buttonMusic.onclick = function () {
             if (!isSwitchedOn) {
                 audio.play();
-                icon.src = "./files/SoundON.png";
+                icon.src = "./files/MusicON.png";
                 icon.alt = "Музыка включена";
                 isSwitchedOn = true;
             } else {
                 audio.pause();
-                icon.src = "./files/SoundOFF.png";
+                icon.src = "./files/MusicOFF.png";
                 icon.alt = "Музыка выключена";
                 isSwitchedOn = false;
             }
