@@ -89,7 +89,7 @@ iframe.form {
 
 /* Расписание */
 .schedule-wrapper {
-    background: radial-gradient(circle at top, #e1cfa4, rgba(210, 200, 190, 0.8));
+    /* background: radial-gradient(circle at top, #e1cfa4, rgba(210, 200, 190, 0.8)); */
     padding: 1.125rem;
     border-radius: 1.56rem;
     margin: 0.93rem auto;
@@ -181,7 +181,7 @@ iframe.form {
   }
 
   .calendar-img {
-    width: 50%;
+    width: 30%;
     height: auto;
     border-radius: 0.75rem;
     box-shadow: 0 0.187rem 0.375rem rgba(0,0,0,0.1);
@@ -251,15 +251,13 @@ iframe.form {
 
 /* Включение и выключение звука */
 #toggleMusic {
-    position: fixed;
     top: 20px;
     right: 20px;
     background-color: transparent;
     border: none;
-    cursor: pointer;
     z-index: 1000;
   }
-  
+
   #musicIcon {
     width: 32px;
     height: 32px;
@@ -268,3 +266,55 @@ iframe.form {
   #toggleMusic:hover #musicIcon {
     transform: scale(1.1);
   }
+
+  /* Календарь */
+  .calendar {
+    max-width: 300px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    color: #5c5c5c;
+  }
+  
+  .month {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .days, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .dates span, .days span {
+    padding: 6px;
+    border-radius: 6px;
+  }
+  
+  .dates span.highlight {
+    background-color: #ffe6f0;
+    color: #d44c6f;
+    font-weight: bold;
+  }
+  
+  .dates span.empty {
+    visibility: hidden;
+  }
+  
+  .heart {
+        background-color: #fbe3e6;
+        color: #c2445c;
+        position: relative;
+      }
+      .heart::after {
+        content: "❤";
+        position: absolute;
+        top: -4px;
+        right: -5px;
+        font-size: 13px;
+      }
