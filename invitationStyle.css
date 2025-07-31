@@ -196,9 +196,11 @@ iframe.form {
 
 .cover-title {
     text-align: center;
-    font-size: 2rem;
-    color: #b48ca3;
+    font-size: 5rem;
+    font-weight: 100;
+    color: #676365;
     margin-top: 1rem;
+    font-family: 'Dancing Script', cursive;
 }
 
 #unlock-btn {
@@ -244,6 +246,13 @@ iframe.form {
 }
 
 .label {
+    text-align: center;
+    margin-top: 0.625rem;
+    font-size: 1.2rem;
+    left: 0;
+}
+
+.main-title {
     text-align: center;
     margin-top: 0.625rem;
     font-size: 1.2rem;
@@ -324,3 +333,33 @@ iframe.form {
     right: -0.3125rem;
     font-size: 0.8125rem;
 }
+
+
+
+/* Галерея */
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 1.25rem;
+    padding: 3.5rem 1.75rem;
+    scrollbar-width: none; /* Firefox */
+  }
+  .gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  
+  /* Фото */
+  .gallery img {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: 31.25rem;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.187rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.03);
+  }
+  
