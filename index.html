@@ -16,7 +16,7 @@
     <div class="glitter-container"></div>
 
     <div id="intro">
-        <div class="cover-title">Wedding invitation ♥</div>
+        <div class="cover-title">Wedding invitation ❤</div>
     </div>
 
     <div class="unlock-container" id="introWithButton">
@@ -28,17 +28,19 @@
 
     <!-- Приглашение (скрыто) -->
     <div id="invitation" style="display: none;">
-        <button id="toggleMusic">
-            <img id="musicIcon" src="./files/MusicON.png" alt="Музыка включена" />
-        </button>
         <div class="container">
-            <h1>С любовью навсегда 💍</h1>
+            <div class="sound-text-container">
+            <button id="toggleMusic">
+                <img id="musicIcon" src="./files/MusicON.png" alt="Музыка включена" />
+            </button>
+            <h1>С любовью навсегда💍</h1>
+            </div>
             <p>Мы рады пригласить Вас на нашу свадьбу!</p>
 
             <!-- 🎀 Имена -->
             <div class="names">
-                <div class="name">Julia</div>
                 <div class="name">Eugene</div>
+                <div class="name">Julia</div>
             </div>
 
             <!-- <div class="mosaic">
@@ -54,6 +56,7 @@
             </div>
 
             <div class="details">
+                <h1>ДАТА</h1>
                 <div class="date">19 сентября 2025</div>
                 <!-- <img src="files/Календарь.PNG" class="calendar-img"> -->
 
@@ -73,6 +76,7 @@
             </div>
 
             <div class="photos">
+                <h1>МЕСТО</h1>
                 <div class="venue">Наш праздник пройдёт в усадьбе Belladzhio VIP Minsk</div>
                 <div class="venue">Она находится по адресу: г. Минск, а.г. Ждановичи, ул. Светлая 18</div>
                 <img src="files/Bellagio.jpg" alt="Фото 2">
@@ -83,7 +87,7 @@
 
             <div class="schedule-wrapper">
                 <div class="schedule-section">
-                    <h2>Тайминг</h2>
+                    <h1>ТАЙМИНГ</h1>
                     <img src="files/Фуршет.jpg" class="calendar-img">
                     <p><strong>15:00</strong> — Сбор гостей, фуршет</p>
                     <img src="files/Церемония.jpg" class="calendar-img">
@@ -132,7 +136,7 @@
         });
 
 
-        const targetDate = new Date('2025-08-23T14:00:00');
+        const targetDate = new Date('2025-09-19T15:00:00');
         const countdown = document.getElementById("countdown");
 
         function updateCountdown() {
