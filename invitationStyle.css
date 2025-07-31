@@ -17,9 +17,9 @@ body {
 /* Заголовок */
 h1 {
     /* font-family: 'Marck Script', cursive; */
-    font-family: 'Angelica Regular', cursive;
+    font-family: 'Great Vibes', cursive;
     font-size: 2.75em;
-    color: #b37f9b;
+    color: #676365;
     margin-bottom: 0.5em;
 }
 
@@ -45,6 +45,7 @@ iframe.music {
 
 .countdown {
     font-size: 1.8em;
+    font-weight: bold;
     margin: 1, 25rem 0;
     color: #ffffff;
 }
@@ -82,7 +83,7 @@ iframe.form {
 }
 
 .venue {
-    font-size: 1.4em;
+    font-size: 1.2em;
     color: #000000;
     margin-top: 0.31rem;
 }
@@ -127,10 +128,10 @@ iframe.form {
     h1 {
         font-size: 2em;
     }
-
+/* 
     .countdown {
         font-size: 1.2em;
-    }
+    } */
 
     .schedule-wrapper {
         padding: 1.25rem;
@@ -196,7 +197,7 @@ iframe.form {
 
 .cover-title {
     text-align: center;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-weight: 100;
     color: #676365;
     margin-top: 1rem;
@@ -260,6 +261,13 @@ iframe.form {
 }
 
 /* Включение и выключение звука */
+.sound-text-container {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* расстояние между кнопкой и текстом */
+    margin: 20px;
+  }
+
 #toggleMusic {
     top: 1.25rem;
     right: 1.25rem;
@@ -267,6 +275,12 @@ iframe.form {
     border: none;
     z-index: 1000;
     left: 0;
+}
+
+.withLove {
+    font-size: 18px;
+  color: #5e4334;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 #musicIcon {
