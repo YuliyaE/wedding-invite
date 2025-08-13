@@ -18,16 +18,16 @@ body {
 h1 {
     /* font-family: 'Marck Script', cursive; */
     font-family: 'Great Vibes', cursive;
-    font-size: 3.75em;
+    font-size: 3.75rem;
     color: #4f4e4e;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
     text-align: center;
 }
 
 p {
     font-family: 'Caveat', cursive;
-    font-size: 1.95rem;
-    margin: 0.5em 0;
+    font-size: 1.7rem;
+    margin: 0.5rem 0;
 }
 
 .photos img {
@@ -46,7 +46,7 @@ iframe.music {
 }
 
 .countdown {
-    font-size: 1.8em;
+    font-size: 1.8rem;
     font-weight: bold;
     margin: 1, 25rem 0;
     color: #ffffff;
@@ -70,29 +70,29 @@ iframe.form {
 
 .name {
     font-family: 'MonteCarlo', cursive;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 /* .name {
     font-family: 'Crimson Pro', cursive;
-    font-size: 3em;
+    font-size: 3rem;
 } */
 
 .name1 {
     font-family: 'Edu NSW ACT Cursive', cursive;
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .name2 {
     font-family: 'Caveat', cursive;
-    font-size: 3em;
+    font-size: 3rem;
 }
 .name3 {
     font-family: 'MonteCarlo', cursive;
-    font-size: 3em;
+    font-size: 3rem;
 }
 .name4 {
     font-family: 'Qwitcher Grypen', cursive;
-    font-size: 6em;
+    font-size: 6rem;
 }
 
 .photo {
@@ -107,7 +107,7 @@ iframe.form {
 }
 
 .venue {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #000000;
     margin-top: 0.31rem;
 }
@@ -126,13 +126,13 @@ iframe.form {
 
 .schedule-wrapper h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 0.93rem;
     color: #000000;
 }
 
 .schedule-wrapper p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin: 0.625rem 0;
 }
 
@@ -148,14 +148,14 @@ iframe.form {
     }
 }
 
-@media (max-width: 37.5rem) {
+@media (max-width: 30rem) {
     h1 {
-        font-size: 2em;
+        font-size: 2.75rem;
     }
 
     /* 
     .countdown {
-        font-size: 1.2em;
+        font-size: 1.2rem;
     } */
 
     .schedule-wrapper {
@@ -222,7 +222,7 @@ iframe.form {
 
 .cover-title {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3.1rem;
     font-weight: 100;
     color: #676365;
     margin-top: 1rem;
@@ -475,13 +475,18 @@ iframe.form {
     padding: 0.937rem 1.25rem;
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
-    width: 45%;
+    width: 50%;
     margin-left: 3.75rem;
   }
   
   .timeline-item:nth-child(even) .timeline-content {
     margin-left: auto;
-    margin-right: 3.75rem;
+    margin-right: -0.75rem;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content {
+    margin-left: -0.75rem;
+    margin-right: auto;
   }
   
   .timeline-content img {
@@ -492,7 +497,7 @@ iframe.form {
   
   .timeline-content .text h3 {
     margin: 0;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: #5a3d8c;
   }
   
