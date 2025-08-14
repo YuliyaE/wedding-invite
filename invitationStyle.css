@@ -24,9 +24,14 @@ h1 {
     text-align: center;
 }
 
-h3 {
+h2 {
     font-family: 'Caveat', cursive;
-    font-size: 1.9rem;
+    font-size: 2.7rem;
+}
+
+h4 {
+    font-family: 'Caveat', cursive;
+    font-size: 2.1rem;
 }
 
 p {
@@ -50,7 +55,15 @@ iframe.music {
 }
 
 .countdown {
-    font-size: 1.5rem;
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin: 1, 25rem 0;
+    color: #ffffff;
+    font-family: 'Great Vibes', cursive;
+}
+
+.countdown-text{
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 1, 25rem 0;
     color: #ffffff;
@@ -74,29 +87,7 @@ iframe.form {
 
 .name {
     font-family: 'MonteCarlo', cursive;
-    font-size: 4rem;
-}
-/* .name {
-    font-family: 'Crimson Pro', cursive;
-    font-size: 3rem;
-} */
-
-.name1 {
-    font-family: 'Edu NSW ACT Cursive', cursive;
-    font-size: 3rem;
-}
-
-.name2 {
-    font-family: 'Caveat', cursive;
-    font-size: 3rem;
-}
-.name3 {
-    font-family: 'MonteCarlo', cursive;
-    font-size: 3rem;
-}
-.name4 {
-    font-family: 'Qwitcher Grypen', cursive;
-    font-size: 6rem;
+    font-size: 5.5rem;
 }
 
 .photo {
@@ -111,9 +102,11 @@ iframe.form {
 }
 
 .venue {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
+    font-family: 'Caveat', cursive;
     color: #000000;
     margin-top: 0.31rem;
+    font-family: 'Caveat', cursive;
 }
 
 /* Расписание */
@@ -140,6 +133,11 @@ iframe.form {
     margin: 0.625rem 0;
 }
 
+.mainHeader {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+}
+
 @keyframes pulse {
 
     0%,
@@ -153,27 +151,48 @@ iframe.form {
 }
 
 @media (max-width: 30rem) {
+    .name {
+        font-family: 'MonteCarlo', cursive;
+        font-size: 4rem;
+    }
+    
     h1 {
         font-size: 2.75rem;
     }
 
-    p {
-        font-family: 'Caveat', cursive;
-        font-size: 1.3rem;
+    h2 {
+        font-size: 2.3rem;
     }
 
-    h3 {
+    p {
+        font-family: 'Caveat', cursive;
+        font-size: 1.4rem;
+    }
+
+    h4 {
         font-family: 'Caveat', cursive;
         font-size: 1.7rem;
     }
 
-    /* 
-    .countdown {
-        font-size: 1.2rem;
-    } */
+    .date {
+        font-family: 'Caveat', cursive;
+        font-size: 2.5rem;
+    }
 
     .schedule-wrapper {
         padding: 1.25rem;
+    }
+
+    .mainHeader {
+        font-family: 'Great Vibes', cursive;
+        font-size: 2.5rem;
+    }
+
+    .venue {
+        font-size: 1.6rem;
+        font-family: 'Caveat', cursive;
+        color: #000000;
+        margin-top: 0.31rem;
     }
 }
 
@@ -218,6 +237,15 @@ iframe.form {
     height: auto;
     border-radius: 0.75rem;
     box-shadow: 0 0.187rem 0.375rem rgba(0, 0, 0, 0.1);
+}
+
+.arrow-img {
+    width: 15rem;
+    height: 8rem;
+    border-radius: 0.75rem;
+    transform: rotate(180deg);
+    position: relative;
+    top: -10px;
 }
 
 .calendar-img {
@@ -407,17 +435,17 @@ iframe.form {
     height: 0.65rem;
     /* Chrome, Safari */
 }
-  
+
 .gallery::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.8);
+    background: #ffffff;
     border-radius: 0.25rem;
-  }
-  
-  .gallery::-webkit-scrollbar-thumb {
-    background-color: #747373;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #c4a7e7;
     border-radius: 0.25rem;
     border: 0.125rem solid rgba(210, 200, 190, 0.8);
-  }
+}
 
 /* Фото */
 .gallery img {
@@ -442,9 +470,9 @@ iframe.form {
     padding: 1.25rem;
     width: 90%;
     max-width: 43.75rem;
-  }
-  
-  .timeline::before {
+}
+
+.timeline::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -453,9 +481,9 @@ iframe.form {
     width: 0.25rem;
     background: #c4a7e7;
     transform: translateX(-50%);
-  }
-  
-  .timeline-item {
+}
+
+.timeline-item {
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -464,14 +492,14 @@ iframe.form {
     opacity: 0;
     transform: translateY(1.875rem);
     transition: all 0.8s ease;
-  }
-  
-  .timeline-item.visible {
+}
+
+.timeline-item.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-  
-  .timeline-dot {
+}
+
+.timeline-dot {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -480,42 +508,88 @@ iframe.form {
     background: #c4a7e7;
     border-radius: 50%;
     z-index: 2;
-  }
-  
-  .timeline-content {
+}
+
+.timeline-content {
     display: absolute;
     align-items: center;
     background: rgba(221, 214, 202, 0.95);
     padding: 0.937rem 1.25rem;
     border-radius: 0.625rem;
-    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.1);
     width: 50%;
     margin-left: 3.75rem;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-content {
+}
+
+.timeline-item:nth-child(even) .timeline-content {
     margin-left: auto;
     margin-right: -0.75rem;
-  }
+}
 
-  .timeline-item:nth-child(odd) .timeline-content {
+.timeline-item:nth-child(odd) .timeline-content {
     margin-left: -0.75rem;
     margin-right: auto;
-  }
-  
-  .timeline-content img {
+}
+
+.timeline-content img {
     width: 3.125rem;
     height: 3.125rem;
-    margin-right: 0.312rem;
-  }
-  
-  .timeline-content .text h3 {
+    align-items: center;
+}
+
+.timeline-content .text h3 {
     margin: 0;
     font-size: 1.2rem;
     color: #5a3d8c;
-  }
-  
-  .timeline-content .text p {
+}
+
+.timeline-content .text p {
     margin: 0.312rem 0 0;
     color: #333;
-  }
+}
+
+/* Коллаж из фото */
+.collage-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-left: 1.1rem;
+}
+
+.photo {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+/* Индивидуальные позиции */
+.photo1 {
+    top: 0;
+    left: 20px;
+    transform: rotate(-5deg);
+}
+
+.photo2 {
+    top: 40px;
+    left: 100px;
+    transform: rotate(8deg);
+}
+
+.photo3 {
+    top: 100px;
+    left: 60px;
+    transform: rotate(-3deg);
+}
