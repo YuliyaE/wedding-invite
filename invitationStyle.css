@@ -138,6 +138,51 @@ iframe.form {
     font-size: 3rem;
 }
 
+/* Галерея */
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 1.25rem;
+    scrollbar-width: thin;
+    /* Firefox */
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.gallery::-webkit-scrollbar {
+    height: 0.65rem;
+    /* Chrome, Safari */
+}
+
+.gallery::-webkit-scrollbar-track {
+    background: #ffffff;
+    border-radius: 0.25rem;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+    background-color: #c4a7e7;
+    border-radius: 0.25rem;
+    border: 0.125rem solid rgba(210, 200, 190, 0.8);
+}
+
+/* Фото */
+.gallery img {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: 31.25rem;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.187rem 0.375rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
 @keyframes pulse {
 
     0%,
@@ -166,7 +211,7 @@ iframe.form {
 
     p {
         font-family: 'Caveat', cursive;
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
 
     h4 {
@@ -193,6 +238,50 @@ iframe.form {
         font-family: 'Caveat', cursive;
         color: #000000;
         margin-top: 0.31rem;
+    }
+
+    .gallery {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        gap: 1.25rem;
+        scrollbar-width: thin;
+        /* Firefox */
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+    
+    .gallery::-webkit-scrollbar {
+        height: 0.65rem;
+        /* Chrome, Safari */
+    }
+    
+    .gallery::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-radius: 0.25rem;
+    }
+    
+    .gallery::-webkit-scrollbar-thumb {
+        background-color: #c4a7e7;
+        border-radius: 0.25rem;
+        border: 0.125rem solid rgba(210, 200, 190, 0.8);
+    }
+    
+    /* Фото */
+    .gallery img {
+        flex-shrink: 0;
+        width: 80vw;
+        max-width: 31.25rem;
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 0.187rem 0.375rem rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.03);
     }
 }
 
@@ -413,53 +502,6 @@ iframe.form {
     top: -0.25rem;
     right: -0.3125rem;
     font-size: 0.8125rem;
-}
-
-
-
-/* Галерея */
-.gallery {
-    display: flex;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    gap: 1.25rem;
-    scrollbar-width: thin;
-    /* Firefox */
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-.gallery::-webkit-scrollbar {
-    height: 0.65rem;
-    /* Chrome, Safari */
-}
-
-.gallery::-webkit-scrollbar-track {
-    background: #ffffff;
-    border-radius: 0.25rem;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-    background-color: #c4a7e7;
-    border-radius: 0.25rem;
-    border: 0.125rem solid rgba(210, 200, 190, 0.8);
-}
-
-/* Фото */
-.gallery img {
-    flex-shrink: 0;
-    width: 80vw;
-    max-width: 31.25rem;
-    height: auto;
-    border-radius: 0.75rem;
-    box-shadow: 0 0.187rem 0.375rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.03);
 }
 
 /* Timing */
