@@ -9,11 +9,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="invitationStyle.css">
 
 <body>
@@ -40,8 +37,8 @@
                     <img id="musicIcon" src="./files/MusicON.png" alt="Музыка включена" />
                 </button>
             </div>
-            <h1>С любовью навсегда💍</h1>
-            <h3>Мы рады пригласить Вас на нашу свадьбу!</h3>
+            <div class="mainHeader">С любовью навсегда💍</div>
+            <h4>Мы рады пригласить Вас на нашу свадьбу!</h4>
 
             <!-- 🎀 Имена -->
             <div class="names">
@@ -57,7 +54,7 @@
 
             <div class="gallery">
                 <img src="files/Побольше.jpg" class="mosaic-img">
-                <img src="files/photo_2025-07-28_00-46-24.jpg" class="mosaic-img">
+                <img src="files/DSC_3556.jpg" class="mosaic-img">
                 <img src="files/photo_2025-07-06_10-51-51.jpg" class="mosaic-img">
             </div>
 
@@ -93,16 +90,6 @@
             <div class="schedule-wrapper">
                 <div class="schedule-section">
                     <h1>Тайминг</h1>
-                    <!--  <img src="files/Фуршет.jpg" class="calendar-img">
-                    <p><strong>15:00</strong> — Сбор гостей, фуршет</p>
-                    <img src="files/Церемония.jpg" class="calendar-img">
-                    <p><strong>16:00</strong> — Торжественная церемония</p>
-                    <img src="files/Банкет.jpg" class="calendar-img">
-                    <p><strong>17:00</strong> — Банкет</p>
-                    <img src="files/Торт.png" class="calendar-img">
-                    <p><strong>22:00</strong> — Свадебный торт</p>
-                    <img src="files/Завершение.jpg" class="calendar-img">
-                    <p><strong>23:00</strong> — Завершение вечера</p> -->
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
@@ -167,6 +154,7 @@
                 Это станет прекрасным дополнением к нашему празднику!</p>
             <p>Подтвердите, пожалуйста, своё присутствие до <b>05.09.2025</b></p>
 
+            <div class="countdown-text">До нашей свадьбы осталось:</div>
             <div class="countdown" id="countdown">До нашей свадьбы осталось: ... </div>
 
             <p>Ждём Вас!</p>
@@ -216,7 +204,7 @@
             const days = Math.floor(diff / (1000 * 60 * 60 * 24));
             const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
             const minutes = Math.floor(diff / (1000 * 60)) % 60;
-            countdown.textContent = `До нашей свадьбы осталось: ${days} дн. ${hours} ч. ${minutes} мин.`;
+            countdown.textContent = `${days} дн. ${hours} ч. ${minutes} мин.`;
         }
         updateCountdown();
         setInterval(updateCountdown, 60000);
